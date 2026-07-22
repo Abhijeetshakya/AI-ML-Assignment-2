@@ -52,10 +52,4 @@ Confusion Matrix:
 ## Conclusion
 This project used a Logistic Regression model to predict customer churn for a telecommunications company using the Telco Customer Churn dataset. Rows with missing `TotalCharges` values were dropped and categorical variables were one-hot encoded before an 80/20 train-test split. The model achieved an accuracy of about 79%, with a precision of 0.62 and recall of 0.52 for the churn class. The results show that **contract type**, **tenure**, and **monthly/total charges** are the strongest predictors of churn: customers on month-to-month contracts with short tenure and high charges (often for fiber-optic internet) are most likely to leave, while long-tenured customers on annual contracts are the most loyal. These findings suggest that retention efforts should focus on new, high-paying, month-to-month customers, for example through loyalty incentives or contract upgrades. A key limitation of Logistic Regression here is that it assumes a **linear relationship** between the features and the log-odds of churn, and cannot naturally capture complex, non-linear interactions between features (e.g., how contract type and internet service jointly affect churn) the way tree-based models like Random Forest or Gradient Boosting can.
 
-## How to Run
-```bash
-pip install pandas numpy scikit-learn matplotlib seaborn jupyter
-jupyter notebook Assignment-2.ipynb
-# or, for the script version:
-python Assignment-2.py
-```
+
